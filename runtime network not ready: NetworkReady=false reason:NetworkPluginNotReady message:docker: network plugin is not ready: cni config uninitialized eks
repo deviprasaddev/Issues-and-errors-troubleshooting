@@ -1,0 +1,13 @@
+EKS error - nodes NOTREADY
+
+runtime network not ready: NetworkReady=false reason:NetworkPluginNotReady message:docker: network plugin is not ready: cni config uninitialized eks
+
+
+https://stackoverflow.com/questions/52675934/network-plugin-is-not-ready-cni-config-uninitialized
+
+
+Solution:
+---------
+
+-> kube-proxy is missing, removed by someone
+-> Added kube-proxy from the Add-ons in EKS cluster console
